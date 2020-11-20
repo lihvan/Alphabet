@@ -14,6 +14,8 @@ private:
 public:
     ~alphabet();
     int ReadFromFile(std::string path);
+    int QuickBinarySearch(std::string word);
+    std::string operator[](int index);
 };
 
 #endif
