@@ -11,10 +11,14 @@ class alphabet {
 private:
     std::vector<std::string> data;
 
+    int QuickBinarySearch(std::string word);
+
 public:
     ~alphabet();
     int ReadFromFile(std::string path);
-    int QuickBinarySearch(std::string word);
+    void ShowInLine();
+    void ShowInColumn();
+
     std::string operator[](int index);
 };
 
