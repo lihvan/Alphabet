@@ -8,13 +8,13 @@ FLAGS = -std=c++11
 
 all: bin/$(PROJECT_NAME) bin/$(TEST_NAME) format
 
-bin/$(PROJECT_NAME): build/src/main.o build/src/alphabet.o
+bin/$(PROJECT_NAME): build/src/main.o build/src/alphabet.o build/src/menu.o build/src/show.o
 			$(CXX) $(COMPILEFLAGS) $^ -o $@
 
 build/src/%.o: src/%.cpp
 			$(CXX) $(COMPILEFLAGS) $(INCLUDE_DIR) -c $< -o $@ $(FLAGS)
 
-format: src/main.cpp
+format: 
 			clang-format -i src/*.cpp include/*.h test/*.cpp 
 
 clean:
