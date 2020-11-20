@@ -9,7 +9,7 @@ int alphabet::ReadFromFile(std::string path)
 {
     data.clear();
     std::ifstream file;
-    file.open(path);
+    file.open(path, std::ios::in);
     if (file.is_open()) {
         return 1;
     }
